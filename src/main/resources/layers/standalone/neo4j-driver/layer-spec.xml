@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="neo4j-driver">
+  <!-- Add the driver to the datasources subsystem -->
+  <feature spec="subsystem.datasources">
+    <feature spec="subsystem.datasources.jdbc-driver">
+      <param name="driver-name" value="neo4j"/>
+      <param name="jdbc-driver" value="neo4j"/>
+      <param name="driver-module-name" value="org.neo4j.jdbc"/>
+      <param name="driver-class-name" value="org.neo4j.jdbc.bolt.BoltDriver"/>
+    </feature>
+  </feature>
+
+  <!-- Will install the JBoss Modules org.mariadb.jdbc module. -->
+  <packages>
+    <package name="org.neo4j.jdbc"/>
+  </packages>
+</layer-spec>

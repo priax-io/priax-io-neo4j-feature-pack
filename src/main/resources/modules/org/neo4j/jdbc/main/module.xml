@@ -1,0 +1,10 @@
+<module xmlns="urn:jboss:module:1.9" name="org.neo4j.jdbc">
+    <resources>
+        <artifact name="${org.neo4j:neo4j-jdbc-driver}"/>
+    </resources>
+    <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.transaction.api"/>
+		<module name="org.apache.logging.log4j.api"/>
+    </dependencies>
+</module>
